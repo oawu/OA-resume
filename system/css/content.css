@@ -1,0 +1,102 @@
+/**
+ * @author      OA Wu <comdan66@gmail.com>
+ * @copyright   Copyright (c) 2014 OA Wu Design
+ */
+/* line 15, ../scss/content.scss */
+html body #container {
+  display: inline-block;
+  width: 960px;
+  margin: 0 auto;
+}
+/* line 21, ../scss/content.scss */
+html body #container #panels .panel {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  border: 1px solid red;
+  height: 600px;
+}
+/* line 28, ../scss/content.scss */
+html body #container #panels .panel .unit {
+  position: absolute;
+  display: inline-block;
+  top: 10px;
+  left: 10px;
+  border: 1px solid green;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -moz-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  -webkit-transition-duration: 1s;
+  transition-duration: 1s;
+  -moz-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+}
+/* line 40, ../scss/content.scss */
+html body #container #panels .panel .unit.active {
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+}
+/* line 44, ../scss/content.scss */
+html body #container #panels .panel .unit.hi {
+  top: 200px;
+  left: 0;
+  width: 100%;
+  font-size: 100px;
+}
+/* line 50, ../scss/content.scss */
+html body #container #panels .panel .unit.hi_desc {
+  top: 350px;
+  left: 0;
+  width: 100%;
+  font-size: 30px;
+  color: #98989a;
+}
+/* line 61, ../scss/content.scss */
+html body #container #panels .panel.user .t1, html body #container #panels .panel.a1 .t1 {
+  top: 100px;
+  left: 0;
+  width: 100px;
+  height: 100px;
+}
+/* line 67, ../scss/content.scss */
+html body #container #panels .panel.user .t2, html body #container #panels .panel.a1 .t2 {
+  top: 200px;
+  left: 100px;
+  width: 100px;
+  height: 100px;
+}
+/* line 73, ../scss/content.scss */
+html body #container #panels .panel.user .t3, html body #container #panels .panel.a1 .t3 {
+  top: 300px;
+  left: 200px;
+  width: 100px;
+  height: 100px;
+}
+/* line 79, ../scss/content.scss */
+html body #container #panels .panel.user .t4, html body #container #panels .panel.a1 .t4 {
+  top: 400px;
+  left: 300px;
+  width: 100px;
+  height: 100px;
+}
+/* line 85, ../scss/content.scss */
+html body #container #panels .panel.user .t5, html body #container #panels .panel.a1 .t5 {
+  top: 500px;
+  left: 400px;
+  width: 100px;
+  height: 100px;
+}
+/* line 91, ../scss/content.scss */
+html body #container #panels .panel.user .t6, html body #container #panels .panel.a1 .t6 {
+  top: 600px;
+  left: 500px;
+  width: 100px;
+  height: 100px;
+}

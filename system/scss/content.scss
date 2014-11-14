@@ -1,0 +1,105 @@
+/**
+ * @author      OA Wu <comdan66@gmail.com>
+ * @copyright   Copyright (c) 2014 OA Wu Design
+ */
+@import "_oa";
+
+$panelHeight: 600px;
+$topActionRange: 100px;
+
+@mixin action-top ($px) {
+  top: $px + $topActionRange;
+}
+html {
+  body {
+    #container {
+      display: inline-block;
+      width: 960px;
+      margin: 0 auto;
+
+      #panels {
+        .panel {
+          position: relative;
+          display: inline-block;
+          width: 100%;
+          border: 1px solid red;
+          height: $panelHeight;
+
+          .unit {
+            position: absolute;
+            display: inline-block;
+            top: 10px;
+            left: 10px;
+            border: 1px solid green;
+
+            @include opacity(0);
+            @include transition-property(all);
+            @include transition-duration(1s);
+            @include transition-timing-function(ease-in-out);
+
+            &.active {
+              @include opacity(1);
+            }
+
+            &.hi {
+              @include action-top(100px);
+              left: 0;
+              width: 100%;
+              font-size: 100px;
+            }
+            &.hi_desc {
+              @include action-top(250px);
+              left: 0;
+              width: 100%;
+              font-size: 30px;
+              color: rgba(152, 152, 154, 1);
+
+            }
+          }
+
+          &.user, &.a1   {
+            .t1 {
+              @include action-top(0);
+              left: 0;
+              width: 100px;
+              height: 100px;
+            }
+            .t2 {
+              @include action-top(100px);
+              left: 100px;
+              width: 100px;
+              height: 100px;
+            }
+            .t3 {
+              @include action-top(200px);
+              left: 200px;
+              width: 100px;
+              height: 100px;
+            }
+            .t4{
+              @include action-top(300px);
+              left: 300px;
+              width: 100px;
+              height: 100px;
+            }
+            .t5 {
+              @include action-top(400px);
+              left: 400px;
+              width: 100px;
+              height: 100px;
+            }
+            .t6 {
+              @include action-top(500px);
+              left: 500px;
+              width: 100px;
+              height: 100px;
+            }
+          }
+
+
+
+        }
+      }
+    }
+  }
+}
