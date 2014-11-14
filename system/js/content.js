@@ -5,9 +5,12 @@
 $(function () {
   var panelHeight = 600;
   var topActionRange = 100;
+  var containerTop = 50;
 
   var scroll_timer = null;
   var actionRange = panelHeight / 2;
+
+  actionRange += containerTop;
 
   $('.imgLiquid').imgLiquid ({verticalAlign: 'top'});
   

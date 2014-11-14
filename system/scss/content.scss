@@ -6,16 +6,18 @@
 
 $panelHeight: 600px;
 $topActionRange: 100px;
+$containerTop: 50px;
 
 @mixin action-top ($px) {
   top: $px + $topActionRange;
 }
 html {
   body {
+    background: url(../img/background.jpg);
     #container {
       display: inline-block;
       width: 960px;
-      margin: 0 auto;
+      margin: $containerTop auto;
 
       #panels {
         .panel {
@@ -32,6 +34,8 @@ html {
             left: 10px;
             border: 1px solid green;
 
+            // background-color: pink;
+
             @include opacity(0);
             @include transition-property(all);
             @include transition-duration(1s);
@@ -42,13 +46,15 @@ html {
             }
 
             &.hi {
-              @include action-top(100px);
+              @include action-top(190px);
               left: 0;
               width: 100%;
               font-size: 100px;
+
+              @include text-shadow(2px 2px 3px rgba(0, 0, 0, 0.3));
             }
             &.hi_desc {
-              @include action-top(250px);
+              @include action-top(330px);
               left: 0;
               width: 100%;
               font-size: 30px;
