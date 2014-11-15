@@ -14,8 +14,6 @@ $(function () {
 
   $('.imgLiquid').imgLiquid ({verticalAlign: 'top'});
   
-  // $('.first .unit').addClass ('active');
-
   $('.unit').each (function () {
     $(this).data ('top', $(this).css ('top'));
   });
@@ -43,8 +41,5 @@ $(function () {
       });
     }, 10);
 
-    // console.info ($(window).scrollTop ());
-    // scroll_timer = setTimeout (autoLoadPicturesFromServer, 500);
-    
   }.bind (this)).scroll ();
 });

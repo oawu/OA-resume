@@ -6,37 +6,35 @@
 html body {
   background: url(../img/background.jpg);
 }
-/* line 17, ../scss/content.scss */
+/* line 18, ../scss/content.scss */
 html body #container {
   display: inline-block;
   width: 960px;
   margin: 50px auto;
 }
-/* line 23, ../scss/content.scss */
+/* line 24, ../scss/content.scss */
 html body #container #panels .panel {
   position: relative;
   display: inline-block;
   width: 100%;
-  border: 1px solid red;
   height: 600px;
 }
-/* line 30, ../scss/content.scss */
+/* line 31, ../scss/content.scss */
 html body #container #panels .panel .unit {
+  top: 100px;
+  left: 0;
   position: absolute;
   display: inline-block;
-  top: 10px;
-  left: 10px;
-  border: 1px solid green;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
   -moz-transition-property: all;
   -o-transition-property: all;
   -webkit-transition-property: all;
   transition-property: all;
-  -moz-transition-duration: 1s;
-  -o-transition-duration: 1s;
-  -webkit-transition-duration: 1s;
-  transition-duration: 1s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
   -moz-transition-timing-function: ease-in-out;
   -o-transition-timing-function: ease-in-out;
   -webkit-transition-timing-function: ease-in-out;
@@ -47,61 +45,932 @@ html body #container #panels .panel .unit.active {
   filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
 }
-/* line 48, ../scss/content.scss */
-html body #container #panels .panel .unit.hi {
+/* line 47, ../scss/content.scss */
+html body #container #panels .panel .unit k {
+  font-size: 18px;
+  font-weight: bold;
+}
+/* line 51, ../scss/content.scss */
+html body #container #panels .panel .unit u {
+  cursor: pointer;
+}
+/* line 58, ../scss/content.scss */
+html body #container #panels .panel.first .unit.hi {
   top: 290px;
   left: 0;
   width: 100%;
   font-size: 100px;
   text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
 }
-/* line 56, ../scss/content.scss */
-html body #container #panels .panel .unit.hi_desc {
+/* line 66, ../scss/content.scss */
+html body #container #panels .panel.first .unit.hi_desc {
   top: 430px;
   left: 0;
   width: 100%;
   font-size: 30px;
   color: #98989a;
 }
-/* line 67, ../scss/content.scss */
-html body #container #panels .panel.user .t1, html body #container #panels .panel.a1 .t1 {
-  top: 100px;
+/* line 77, ../scss/content.scss */
+html body #container #panels .panel.user .unit.avatar {
+  top: 180px;
+  left: 50px;
+  width: 200px;
+  height: 200px;
+  border: 5px solid #fafafa;
+  overflow: visible;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  -moz-box-shadow: inset 1px 1px 5px rgba(5, 5, 5, 0.3), 1px 1px 5px rgba(5, 5, 5, 0.3);
+  -webkit-box-shadow: inset 1px 1px 5px rgba(5, 5, 5, 0.3), 1px 1px 5px rgba(5, 5, 5, 0.3);
+  box-shadow: inset 1px 1px 5px rgba(5, 5, 5, 0.3), 1px 1px 5px rgba(5, 5, 5, 0.3);
+}
+/* line 89, ../scss/content.scss */
+html body #container #panels .panel.user .unit.avatar:hover {
+  -moz-transform: scale(1.2, 1.2);
+  -ms-transform: scale(1.2, 1.2);
+  -webkit-transform: scale(1.2, 1.2);
+  transform: scale(1.2, 1.2);
+}
+/* line 92, ../scss/content.scss */
+html body #container #panels .panel.user .unit.avatar:before, html body #container #panels .panel.user .unit.avatar:after {
+  content: '';
+  position: absolute;
+  top: 0;
   left: 0;
-  width: 100px;
-  height: 100px;
+  width: 100%;
+  height: 100%;
+  background: rgba(155, 155, 155, 0.5);
+  z-index: -1;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
 }
-/* line 73, ../scss/content.scss */
-html body #container #panels .panel.user .t2, html body #container #panels .panel.a1 .t2 {
-  top: 200px;
-  left: 100px;
-  width: 100px;
-  height: 100px;
+/* line 106, ../scss/content.scss */
+html body #container #panels .panel.user .unit.avatar:before {
+  -moz-animation: pulse 2s infinite linear;
+  -webkit-animation: pulse 2s infinite linear;
+  animation: pulse 2s infinite linear;
 }
-/* line 79, ../scss/content.scss */
-html body #container #panels .panel.user .t3, html body #container #panels .panel.a1 .t3 {
-  top: 300px;
+/* line 110, ../scss/content.scss */
+html body #container #panels .panel.user .unit.avatar:after {
+  -moz-animation: pulse 2s 1s infinite linear;
+  -webkit-animation: pulse 2s 1s infinite linear;
+  animation: pulse 2s 1s infinite linear;
+}
+@-moz-keyframes pulse {
+  0% {
+    -moz-transform: scale(1, 1);
+    transform: scale(1, 1);
+    opacity: 0;
+  }
+  33% {
+    -moz-transform: scale(1.2, 1.2);
+    transform: scale(1.2, 1.2);
+    opacity: 0.5;
+  }
+  100% {
+    -moz-transform: scale(1.4, 1.4);
+    transform: scale(1.4, 1.4);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+    opacity: 0;
+  }
+  33% {
+    -webkit-transform: scale(1.2, 1.2);
+    transform: scale(1.2, 1.2);
+    opacity: 0.5;
+  }
+  100% {
+    -webkit-transform: scale(1.4, 1.4);
+    transform: scale(1.4, 1.4);
+    opacity: 0;
+  }
+}
+@keyframes pulse {
+  0% {
+    -moz-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+    opacity: 0;
+  }
+  33% {
+    -moz-transform: scale(1.2, 1.2);
+    -ms-transform: scale(1.2, 1.2);
+    -webkit-transform: scale(1.2, 1.2);
+    transform: scale(1.2, 1.2);
+    opacity: 0.5;
+  }
+  100% {
+    -moz-transform: scale(1.4, 1.4);
+    -ms-transform: scale(1.4, 1.4);
+    -webkit-transform: scale(1.4, 1.4);
+    transform: scale(1.4, 1.4);
+    opacity: 0;
+  }
+}
+/* line 129, ../scss/content.scss */
+html body #container #panels .panel.user .unit.infos {
+  border: 0;
+  top: 435px;
+  left: 16px;
+  width: 268px;
+}
+/* line 136, ../scss/content.scss */
+html body #container #panels .panel.user .unit.infos .info + .info {
+  border-top: 1px solid rgba(80, 80, 81, 0.4);
+}
+/* line 140, ../scss/content.scss */
+html body #container #panels .panel.user .unit.infos .info .title, html body #container #panels .panel.user .unit.infos .info .content {
+  float: left;
+  width: 80px;
+  text-align: right;
+  padding: 5px 0;
+  color: rgba(80, 80, 81, 0.8);
+}
+/* line 148, ../scss/content.scss */
+html body #container #panels .panel.user .unit.infos .info .title:after {
+  content: ":";
+}
+/* line 152, ../scss/content.scss */
+html body #container #panels .panel.user .unit.infos .info .content {
+  width: calc(100% - 80px);
+  text-align: left;
+  padding-left: 3px;
+  color: #505051;
+}
+/* line 160, ../scss/content.scss */
+html body #container #panels .panel.user .unit.bg {
+  top: 120px;
+  left: 330px;
+  width: 610px;
+  border: 0;
+}
+/* line 167, ../scss/content.scss */
+html body #container #panels .panel.user .unit.bg .paper {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  background-color: #fff;
+  border: 1px solid rgba(173, 173, 173, 0.7);
+  padding: 30px 50px;
+  text-align: left;
+  color: rgba(70, 70, 71, 0.85);
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+/* line 179, ../scss/content.scss */
+html body #container #panels .panel.user .unit.bg .paper .block {
+  margin-top: 16px;
+  line-height: 24px;
+  text-indent: 24pt;
+}
+/* line 184, ../scss/content.scss */
+html body #container #panels .panel.user .unit.bg .paper .block u {
+  color: rgba(70, 70, 71, 0.95);
+}
+/* line 187, ../scss/content.scss */
+html body #container #panels .panel.user .unit.bg .paper .block k {
+  color: #464647;
+}
+/* line 199, ../scss/content.scss */
+html body #container #panels .panel.java .unit.main_pic_area {
+  top: 180px;
+  left: 30px;
+  width: 520px;
+  height: 355px;
+  -moz-transform: rotate(-4deg);
+  -ms-transform: rotate(-4deg);
+  -webkit-transform: rotate(-4deg);
+  transform: rotate(-4deg);
+  background-color: #fff;
+  border: 0;
+}
+/* line 208, ../scss/content.scss */
+html body #container #panels .panel.java .unit.main_pic_area:hover {
+  -moz-transform: scale(1.2, 1.2);
+  -ms-transform: scale(1.2, 1.2);
+  -webkit-transform: scale(1.2, 1.2);
+  transform: scale(1.2, 1.2);
+  z-index: 999;
+}
+/* line 212, ../scss/content.scss */
+html body #container #panels .panel.java .unit.main_pic_area .paper {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  background-color: #fff;
+  padding: 3px;
+  border: 1px solid #adadad;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+/* line 221, ../scss/content.scss */
+html body #container #panels .panel.java .unit.main_pic_area .paper .main_pic {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  border: 1px solid #646464;
+  overflow: hidden;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+}
+/* line 230, ../scss/content.scss */
+html body #container #panels .panel.java .unit.main_pic_area .paper .main_pic img {
+  width: 100%;
+}
+/* line 236, ../scss/content.scss */
+html body #container #panels .panel.java .unit.title {
+  top: 180px;
+  left: 590px;
+  width: 350px;
+  height: 45px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  border-bottom: 1px solid #a7a7a7;
+}
+/* line 247, ../scss/content.scss */
+html body #container #panels .panel.java .unit.title .time {
+  display: inline;
+  position: absolute;
+  right: 5px;
+  bottom: 8px;
+  font-size: 10px;
+  color: rgba(100, 100, 100, 0.6);
+  padding: 0;
+  line-height: 15px;
+}
+/* line 258, ../scss/content.scss */
+html body #container #panels .panel.java .unit.desc_1, html body #container #panels .panel.java .unit.desc_2, html body #container #panels .panel.java .unit.desc_3 {
+  top: 240px;
+  left: 605px;
+  width: 330px;
+  text-align: left;
+  color: rgba(70, 70, 71, 0.9);
+  line-height: 25px;
+  height: 80px;
+  text-indent: 24pt;
+}
+/* line 268, ../scss/content.scss */
+html body #container #panels .panel.java .unit.desc_1 u, html body #container #panels .panel.java .unit.desc_2 u, html body #container #panels .panel.java .unit.desc_3 u {
+  color: rgba(70, 70, 71, 0.95);
+}
+/* line 271, ../scss/content.scss */
+html body #container #panels .panel.java .unit.desc_1 k, html body #container #panels .panel.java .unit.desc_2 k, html body #container #panels .panel.java .unit.desc_3 k {
+  color: #464647;
+}
+/* line 275, ../scss/content.scss */
+html body #container #panels .panel.java .unit.desc_2 {
+  top: 340px;
+  text-align: left;
+  height: 105px;
+}
+/* line 280, ../scss/content.scss */
+html body #container #panels .panel.java .unit.desc_3 {
+  top: 465px;
+  text-align: left;
+  height: 55px;
+}
+/* line 289, ../scss/content.scss */
+html body #container #panels .panel.msn .unit.youtube {
+  top: 160px;
+  left: 340px;
+  width: 600px;
+  height: 378px;
+}
+/* line 295, ../scss/content.scss */
+html body #container #panels .panel.msn .unit.youtube .iframe {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border: 1px solid #adadad;
+  padding: 2px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+/* line 303, ../scss/content.scss */
+html body #container #panels .panel.msn .unit.youtube .iframe iframe {
+  width: 100%;
+  height: 100%;
+}
+/* line 310, ../scss/content.scss */
+html body #container #panels .panel.msn .unit.title {
+  top: 160px;
+  left: 10px;
+  width: 300px;
+  height: 45px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  border-bottom: 1px solid #a7a7a7;
+}
+/* line 321, ../scss/content.scss */
+html body #container #panels .panel.msn .unit.title .time {
+  display: inline;
+  position: absolute;
+  right: 5px;
+  bottom: 8px;
+  font-size: 10px;
+  color: rgba(100, 100, 100, 0.6);
+  padding: 0;
+  line-height: 15px;
+}
+/* line 332, ../scss/content.scss */
+html body #container #panels .panel.msn .unit.desc_1, html body #container #panels .panel.msn .unit.desc_2, html body #container #panels .panel.msn .unit.desc_3 {
+  top: 230px;
+  left: 20px;
+  width: 280px;
+  text-align: left;
+  color: rgba(70, 70, 71, 0.9);
+  line-height: 25px;
+  height: 130px;
+  text-indent: 24pt;
+}
+/* line 342, ../scss/content.scss */
+html body #container #panels .panel.msn .unit.desc_1 u, html body #container #panels .panel.msn .unit.desc_2 u, html body #container #panels .panel.msn .unit.desc_3 u {
+  color: rgba(70, 70, 71, 0.95);
+}
+/* line 345, ../scss/content.scss */
+html body #container #panels .panel.msn .unit.desc_1 k, html body #container #panels .panel.msn .unit.desc_2 k, html body #container #panels .panel.msn .unit.desc_3 k {
+  color: #464647;
+}
+/* line 349, ../scss/content.scss */
+html body #container #panels .panel.msn .unit.desc_2 {
+  top: 380px;
+  text-align: left;
+  height: 180px;
+}
+/* line 354, ../scss/content.scss */
+html body #container #panels .panel.msn .unit.desc_3 {
+  top: 570px;
+  text-align: left;
+  height: 65px;
+  width: 930px;
+}
+/* line 365, ../scss/content.scss */
+html body #container #panels .panel.plurker .unit.youtube {
+  top: 190px;
+  left: 10px;
+  width: 575px;
+  height: 370px;
+}
+/* line 371, ../scss/content.scss */
+html body #container #panels .panel.plurker .unit.youtube .iframe {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border: 1px solid #adadad;
+  padding: 2px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+/* line 379, ../scss/content.scss */
+html body #container #panels .panel.plurker .unit.youtube .iframe iframe {
+  width: 100%;
+  height: 100%;
+}
+/* line 386, ../scss/content.scss */
+html body #container #panels .panel.plurker .unit.title {
+  top: 160px;
+  left: 610px;
+  width: 340px;
+  height: 45px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  border-bottom: 1px solid #a7a7a7;
+}
+/* line 397, ../scss/content.scss */
+html body #container #panels .panel.plurker .unit.title .time {
+  display: inline;
+  position: absolute;
+  right: 5px;
+  bottom: 8px;
+  font-size: 10px;
+  color: rgba(100, 100, 100, 0.6);
+  padding: 0;
+  line-height: 15px;
+}
+/* line 408, ../scss/content.scss */
+html body #container #panels .panel.plurker .unit.desc_1, html body #container #panels .panel.plurker .unit.desc_2, html body #container #panels .panel.plurker .unit.desc_3 {
+  top: 225px;
+  left: 615px;
+  width: 330px;
+  text-align: left;
+  color: rgba(70, 70, 71, 0.9);
+  line-height: 25px;
+  height: 100px;
+  text-indent: 24pt;
+}
+/* line 418, ../scss/content.scss */
+html body #container #panels .panel.plurker .unit.desc_1 u, html body #container #panels .panel.plurker .unit.desc_2 u, html body #container #panels .panel.plurker .unit.desc_3 u {
+  color: rgba(70, 70, 71, 0.95);
+}
+/* line 421, ../scss/content.scss */
+html body #container #panels .panel.plurker .unit.desc_1 k, html body #container #panels .panel.plurker .unit.desc_2 k, html body #container #panels .panel.plurker .unit.desc_3 k {
+  color: #464647;
+}
+/* line 425, ../scss/content.scss */
+html body #container #panels .panel.plurker .unit.desc_2 {
+  top: 345px;
+  text-align: left;
+  height: 130px;
+}
+/* line 430, ../scss/content.scss */
+html body #container #panels .panel.plurker .unit.desc_3 {
+  top: 495px;
+  text-align: left;
+  height: 80px;
+}
+/* line 439, ../scss/content.scss */
+html body #container #panels .panel.assembler .unit.main_pic_area {
+  top: 130px;
+  left: 360px;
+  width: 520px;
+  height: 327px;
+  -moz-transform: rotate(4deg);
+  -ms-transform: rotate(4deg);
+  -webkit-transform: rotate(4deg);
+  transform: rotate(4deg);
+  background-color: #fff;
+  border: 0;
+}
+/* line 448, ../scss/content.scss */
+html body #container #panels .panel.assembler .unit.main_pic_area:hover {
+  -moz-transform: scale(1.2, 1.2);
+  -ms-transform: scale(1.2, 1.2);
+  -webkit-transform: scale(1.2, 1.2);
+  transform: scale(1.2, 1.2);
+  z-index: 999;
+}
+/* line 452, ../scss/content.scss */
+html body #container #panels .panel.assembler .unit.main_pic_area .paper {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  background-color: #fff;
+  padding: 3px;
+  border: 1px solid #adadad;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+/* line 461, ../scss/content.scss */
+html body #container #panels .panel.assembler .unit.main_pic_area .paper .main_pic {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  border: 1px solid #646464;
+  overflow: hidden;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+}
+/* line 470, ../scss/content.scss */
+html body #container #panels .panel.assembler .unit.main_pic_area .paper .main_pic img {
+  width: 100%;
+}
+/* line 476, ../scss/content.scss */
+html body #container #panels .panel.assembler .unit.title {
+  top: 475px;
+  left: 10px;
+  width: 370px;
+  height: 45px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  border-bottom: 1px solid #a7a7a7;
+}
+/* line 487, ../scss/content.scss */
+html body #container #panels .panel.assembler .unit.title .time {
+  display: inline;
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  font-size: 10px;
+  color: rgba(100, 100, 100, 0.6);
+  padding: 0;
+  line-height: 15px;
+}
+/* line 498, ../scss/content.scss */
+html body #container #panels .panel.assembler .unit.desc_1, html body #container #panels .panel.assembler .unit.desc_2 {
+  top: 540px;
+  left: 20px;
+  width: 910px;
+  text-align: left;
+  color: rgba(70, 70, 71, 0.9);
+  line-height: 25px;
+  height: 60px;
+  text-indent: 24pt;
+}
+/* line 508, ../scss/content.scss */
+html body #container #panels .panel.assembler .unit.desc_1 u, html body #container #panels .panel.assembler .unit.desc_2 u {
+  color: rgba(70, 70, 71, 0.95);
+}
+/* line 511, ../scss/content.scss */
+html body #container #panels .panel.assembler .unit.desc_1 k, html body #container #panels .panel.assembler .unit.desc_2 k {
+  color: #464647;
+}
+/* line 515, ../scss/content.scss */
+html body #container #panels .panel.assembler .unit.desc_2 {
+  top: 610px;
+  text-align: left;
+}
+/* line 523, ../scss/content.scss */
+html body #container #panels .panel.arduino .unit.pic_area_1, html body #container #panels .panel.arduino .unit.pic_area_2, html body #container #panels .panel.arduino .unit.pic_area_3, html body #container #panels .panel.arduino .unit.pic_area_4 {
+  top: 130px;
+  left: 20px;
+  width: 320px;
+  height: 240px;
+  -moz-transform: rotate(-4deg);
+  -ms-transform: rotate(-4deg);
+  -webkit-transform: rotate(-4deg);
+  transform: rotate(-4deg);
+  background-color: #fff;
+  border: 0;
+}
+/* line 532, ../scss/content.scss */
+html body #container #panels .panel.arduino .unit.pic_area_1:hover, html body #container #panels .panel.arduino .unit.pic_area_2:hover, html body #container #panels .panel.arduino .unit.pic_area_3:hover, html body #container #panels .panel.arduino .unit.pic_area_4:hover {
+  -moz-transform: scale(1.2, 1.2);
+  -ms-transform: scale(1.2, 1.2);
+  -webkit-transform: scale(1.2, 1.2);
+  transform: scale(1.2, 1.2);
+  z-index: 999;
+}
+/* line 536, ../scss/content.scss */
+html body #container #panels .panel.arduino .unit.pic_area_1 .paper, html body #container #panels .panel.arduino .unit.pic_area_2 .paper, html body #container #panels .panel.arduino .unit.pic_area_3 .paper, html body #container #panels .panel.arduino .unit.pic_area_4 .paper {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  background-color: #fff;
+  padding: 3px;
+  border: 1px solid #adadad;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+/* line 545, ../scss/content.scss */
+html body #container #panels .panel.arduino .unit.pic_area_1 .paper .pic, html body #container #panels .panel.arduino .unit.pic_area_2 .paper .pic, html body #container #panels .panel.arduino .unit.pic_area_3 .paper .pic, html body #container #panels .panel.arduino .unit.pic_area_4 .paper .pic {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  border: 1px solid #646464;
+  overflow: hidden;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+}
+/* line 553, ../scss/content.scss */
+html body #container #panels .panel.arduino .unit.pic_area_1 .paper .pic img, html body #container #panels .panel.arduino .unit.pic_area_2 .paper .pic img, html body #container #panels .panel.arduino .unit.pic_area_3 .paper .pic img, html body #container #panels .panel.arduino .unit.pic_area_4 .paper .pic img {
+  width: 100%;
+}
+/* line 559, ../scss/content.scss */
+html body #container #panels .panel.arduino .unit.pic_area_1 {
+  top: 140px;
+  left: 20px;
+  -moz-transform: rotate(-6deg);
+  -ms-transform: rotate(-6deg);
+  -webkit-transform: rotate(-6deg);
+  transform: rotate(-6deg);
+}
+/* line 564, ../scss/content.scss */
+html body #container #panels .panel.arduino .unit.pic_area_2 {
+  top: 220px;
   left: 200px;
-  width: 100px;
-  height: 100px;
+  -moz-transform: rotate(0);
+  -ms-transform: rotate(0);
+  -webkit-transform: rotate(0);
+  transform: rotate(0);
 }
-/* line 85, ../scss/content.scss */
-html body #container #panels .panel.user .t4, html body #container #panels .panel.a1 .t4 {
-  top: 400px;
-  left: 300px;
-  width: 100px;
-  height: 100px;
-}
-/* line 91, ../scss/content.scss */
-html body #container #panels .panel.user .t5, html body #container #panels .panel.a1 .t5 {
-  top: 500px;
+/* line 569, ../scss/content.scss */
+html body #container #panels .panel.arduino .unit.pic_area_3 {
+  top: 120px;
   left: 400px;
-  width: 100px;
-  height: 100px;
+  -moz-transform: rotate(6deg);
+  -ms-transform: rotate(6deg);
+  -webkit-transform: rotate(6deg);
+  transform: rotate(6deg);
 }
-/* line 97, ../scss/content.scss */
-html body #container #panels .panel.user .t6, html body #container #panels .panel.a1 .t6 {
-  top: 600px;
-  left: 500px;
-  width: 100px;
-  height: 100px;
+/* line 574, ../scss/content.scss */
+html body #container #panels .panel.arduino .unit.pic_area_4 {
+  top: 390px;
+  left: 50px;
+  -moz-transform: rotate(4deg);
+  -ms-transform: rotate(4deg);
+  -webkit-transform: rotate(4deg);
+  transform: rotate(4deg);
+}
+/* line 580, ../scss/content.scss */
+html body #container #panels .panel.arduino .unit.title {
+  top: 400px;
+  left: 560px;
+  width: 340px;
+  height: 45px;
+  line-height: 40px;
+  text-align: left;
+  padding-left: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  border-bottom: 1px solid #a7a7a7;
+}
+/* line 592, ../scss/content.scss */
+html body #container #panels .panel.arduino .unit.title .time {
+  display: inline;
+  position: absolute;
+  right: 5px;
+  bottom: 8px;
+  font-size: 10px;
+  color: rgba(100, 100, 100, 0.6);
+  padding: 0;
+  line-height: 15px;
+}
+/* line 603, ../scss/content.scss */
+html body #container #panels .panel.arduino .unit.desc_1, html body #container #panels .panel.arduino .unit.desc_2 {
+  top: 490px;
+  left: 400px;
+  width: 520px;
+  text-align: left;
+  color: rgba(70, 70, 71, 0.9);
+  line-height: 25px;
+  height: 80px;
+  text-indent: 24pt;
+}
+/* line 613, ../scss/content.scss */
+html body #container #panels .panel.arduino .unit.desc_1 u, html body #container #panels .panel.arduino .unit.desc_2 u {
+  color: rgba(70, 70, 71, 0.95);
+}
+/* line 616, ../scss/content.scss */
+html body #container #panels .panel.arduino .unit.desc_1 k, html body #container #panels .panel.arduino .unit.desc_2 k {
+  color: #464647;
+}
+/* line 620, ../scss/content.scss */
+html body #container #panels .panel.arduino .unit.desc_2 {
+  top: 590px;
+  text-align: left;
+  left: 390px;
+  height: 60px;
+}
+/* line 630, ../scss/content.scss */
+html body #container #panels .panel.album .unit.youtube {
+  top: 190px;
+  left: 10px;
+  width: 575px;
+  height: 350px;
+}
+/* line 636, ../scss/content.scss */
+html body #container #panels .panel.album .unit.youtube .iframe {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border: 1px solid #adadad;
+  padding: 2px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+/* line 644, ../scss/content.scss */
+html body #container #panels .panel.album .unit.youtube .iframe iframe {
+  width: 100%;
+  height: 100%;
+}
+/* line 651, ../scss/content.scss */
+html body #container #panels .panel.album .unit.title {
+  top: 160px;
+  left: 610px;
+  width: 340px;
+  height: 45px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  border-bottom: 1px solid #a7a7a7;
+}
+/* line 662, ../scss/content.scss */
+html body #container #panels .panel.album .unit.title .time {
+  display: inline;
+  position: absolute;
+  right: 5px;
+  bottom: 8px;
+  font-size: 10px;
+  color: rgba(100, 100, 100, 0.6);
+  padding: 0;
+  line-height: 15px;
+}
+/* line 673, ../scss/content.scss */
+html body #container #panels .panel.album .unit.desc_1, html body #container #panels .panel.album .unit.desc_2, html body #container #panels .panel.album .unit.desc_3 {
+  top: 225px;
+  left: 615px;
+  width: 330px;
+  text-align: left;
+  color: rgba(70, 70, 71, 0.9);
+  line-height: 25px;
+  height: 125px;
+  text-indent: 24pt;
+}
+/* line 683, ../scss/content.scss */
+html body #container #panels .panel.album .unit.desc_1 u, html body #container #panels .panel.album .unit.desc_2 u, html body #container #panels .panel.album .unit.desc_3 u {
+  color: rgba(70, 70, 71, 0.95);
+}
+/* line 686, ../scss/content.scss */
+html body #container #panels .panel.album .unit.desc_1 k, html body #container #panels .panel.album .unit.desc_2 k, html body #container #panels .panel.album .unit.desc_3 k {
+  color: #464647;
+}
+/* line 690, ../scss/content.scss */
+html body #container #panels .panel.album .unit.desc_2 {
+  top: 360px;
+  text-align: left;
+  height: 110px;
+}
+/* line 695, ../scss/content.scss */
+html body #container #panels .panel.album .unit.desc_3 {
+  top: 470px;
+  text-align: left;
+  height: 80px;
+}
+/* line 704, ../scss/content.scss */
+html body #container #panels .panel.blog .unit.youtube {
+  top: 160px;
+  left: 340px;
+  width: 600px;
+  height: 378px;
+}
+/* line 710, ../scss/content.scss */
+html body #container #panels .panel.blog .unit.youtube .iframe {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border: 1px solid #adadad;
+  padding: 2px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+/* line 718, ../scss/content.scss */
+html body #container #panels .panel.blog .unit.youtube .iframe iframe {
+  width: 100%;
+  height: 100%;
+}
+/* line 725, ../scss/content.scss */
+html body #container #panels .panel.blog .unit.title {
+  top: 160px;
+  left: 10px;
+  width: 300px;
+  height: 45px;
+  line-height: 40px;
+  text-align: left;
+  padding-left: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  border-bottom: 1px solid #a7a7a7;
+}
+/* line 737, ../scss/content.scss */
+html body #container #panels .panel.blog .unit.title .time {
+  display: inline;
+  position: absolute;
+  right: 5px;
+  bottom: 8px;
+  font-size: 10px;
+  color: rgba(100, 100, 100, 0.6);
+  padding: 0;
+  line-height: 15px;
+}
+/* line 748, ../scss/content.scss */
+html body #container #panels .panel.blog .unit.desc_1, html body #container #panels .panel.blog .unit.desc_2, html body #container #panels .panel.blog .unit.desc_3, html body #container #panels .panel.blog .unit.desc_4 {
+  top: 220px;
+  left: 20px;
+  width: 280px;
+  text-align: left;
+  color: rgba(70, 70, 71, 0.9);
+  line-height: 25px;
+  height: 105px;
+  text-indent: 24pt;
+}
+/* line 758, ../scss/content.scss */
+html body #container #panels .panel.blog .unit.desc_1 u, html body #container #panels .panel.blog .unit.desc_2 u, html body #container #panels .panel.blog .unit.desc_3 u, html body #container #panels .panel.blog .unit.desc_4 u {
+  color: rgba(70, 70, 71, 0.95);
+}
+/* line 761, ../scss/content.scss */
+html body #container #panels .panel.blog .unit.desc_1 k, html body #container #panels .panel.blog .unit.desc_2 k, html body #container #panels .panel.blog .unit.desc_3 k, html body #container #panels .panel.blog .unit.desc_4 k {
+  color: #464647;
+}
+/* line 765, ../scss/content.scss */
+html body #container #panels .panel.blog .unit.desc_2 {
+  top: 330px;
+  text-align: left;
+  height: 105px;
+}
+/* line 770, ../scss/content.scss */
+html body #container #panels .panel.blog .unit.desc_3 {
+  top: 440px;
+  text-align: left;
+  height: 105px;
+}
+/* line 775, ../scss/content.scss */
+html body #container #panels .panel.blog .unit.desc_4 {
+  top: 560px;
+  text-align: left;
+  height: 65px;
+  width: 930px;
+}
+/* line 785, ../scss/content.scss */
+html body #container #panels .panel.oame .unit.youtube {
+  top: 190px;
+  left: 10px;
+  width: 575px;
+  height: 370px;
+}
+/* line 791, ../scss/content.scss */
+html body #container #panels .panel.oame .unit.youtube .iframe {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border: 1px solid #adadad;
+  padding: 2px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+/* line 799, ../scss/content.scss */
+html body #container #panels .panel.oame .unit.youtube .iframe iframe {
+  width: 100%;
+  height: 100%;
+}
+/* line 806, ../scss/content.scss */
+html body #container #panels .panel.oame .unit.title {
+  top: 175px;
+  left: 610px;
+  width: 340px;
+  height: 45px;
+  line-height: 40px;
+  text-align: left;
+  padding-left: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  border-bottom: 1px solid #a7a7a7;
+}
+/* line 818, ../scss/content.scss */
+html body #container #panels .panel.oame .unit.title .time {
+  display: inline;
+  position: absolute;
+  right: 5px;
+  bottom: 8px;
+  font-size: 10px;
+  color: rgba(100, 100, 100, 0.6);
+  padding: 0;
+  line-height: 15px;
+}
+/* line 829, ../scss/content.scss */
+html body #container #panels .panel.oame .unit.desc_1, html body #container #panels .panel.oame .unit.desc_2, html body #container #panels .panel.oame .unit.desc_3, html body #container #panels .panel.oame .unit.desc_4 {
+  top: 235px;
+  left: 615px;
+  width: 330px;
+  text-align: left;
+  color: rgba(70, 70, 71, 0.9);
+  line-height: 25px;
+  height: 80px;
+  text-indent: 24pt;
+}
+/* line 839, ../scss/content.scss */
+html body #container #panels .panel.oame .unit.desc_1 u, html body #container #panels .panel.oame .unit.desc_2 u, html body #container #panels .panel.oame .unit.desc_3 u, html body #container #panels .panel.oame .unit.desc_4 u {
+  color: rgba(70, 70, 71, 0.95);
+}
+/* line 842, ../scss/content.scss */
+html body #container #panels .panel.oame .unit.desc_1 k, html body #container #panels .panel.oame .unit.desc_2 k, html body #container #panels .panel.oame .unit.desc_3 k, html body #container #panels .panel.oame .unit.desc_4 k {
+  color: #464647;
+}
+/* line 846, ../scss/content.scss */
+html body #container #panels .panel.oame .unit.desc_2 {
+  top: 320px;
+  text-align: left;
+  height: 105px;
+}
+/* line 851, ../scss/content.scss */
+html body #container #panels .panel.oame .unit.desc_3 {
+  top: 430px;
+  text-align: left;
+  height: 80px;
+}
+/* line 856, ../scss/content.scss */
+html body #container #panels .panel.oame .unit.desc_4 {
+  top: 515px;
+  text-align: left;
+  height: 55px;
 }

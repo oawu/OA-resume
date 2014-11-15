@@ -224,8 +224,11 @@ a:focus {
 /* line 133, ../scss/public.scss */
 .paper {
   position: relative;
+  -moz-box-shadow: 0 1px 10px rgba(153, 153, 153, 0.6);
+  -webkit-box-shadow: 0 1px 10px rgba(153, 153, 153, 0.6);
+  box-shadow: 0 1px 10px rgba(153, 153, 153, 0.6);
 }
-/* line 136, ../scss/public.scss */
+/* line 137, ../scss/public.scss */
 .paper:before, .paper:after {
   z-index: -1;
   position: absolute;
@@ -246,7 +249,7 @@ a:focus {
   -webkit-box-shadow: 0 15px 10px #777;
   box-shadow: 0 15px 10px #777;
 }
-/* line 152, ../scss/public.scss */
+/* line 153, ../scss/public.scss */
 .paper:after {
   right: 10px;
   left: auto;
@@ -256,7 +259,7 @@ a:focus {
   transform: rotate(3deg);
 }
 
-/* line 160, ../scss/public.scss */
+/* line 161, ../scss/public.scss */
 *.little_red_point {
   position: absolute;
   display: inline-block;
@@ -277,13 +280,13 @@ a:focus {
   -webkit-box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.3), inset 1px 1px 1px rgba(255, 255, 255, 0.4);
   box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.3), inset 1px 1px 1px rgba(255, 255, 255, 0.4);
 }
-/* line 177, ../scss/public.scss */
+/* line 178, ../scss/public.scss */
 *.little_red_point:hover {
   -moz-box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.5), inset 1px 1px 1px rgba(255, 255, 255, 0.6);
   -webkit-box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.5), inset 1px 1px 1px rgba(255, 255, 255, 0.6);
   box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.5), inset 1px 1px 1px rgba(255, 255, 255, 0.6);
 }
-/* line 180, ../scss/public.scss */
+/* line 181, ../scss/public.scss */
 *.little_red_point:active {
   -moz-box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.5), inset 1px 1px 1px rgba(0, 0, 0, 0.4);
   -webkit-box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.5), inset 1px 1px 1px rgba(0, 0, 0, 0.4);
