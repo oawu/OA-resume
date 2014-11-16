@@ -35,7 +35,7 @@ $(function () {
     
     scroll_timer = setTimeout (function () {
       $('.panel').each (function () {
-        if (!$(this).data ('active') && ($(window).scrollTop () > $(this).offset ().top - actionRange - 20))
+        if (!$(this).data ('active') && ($(window).scrollTop () > $(this).offset ().top - actionRange))
           $(this).data ('active', true).children ('.unit').each (function () {
             $(this).css ({'top': (parseFloat ($(this).data ('top')) - topActionRange) + 'px'}).addClass ('active');
           });
