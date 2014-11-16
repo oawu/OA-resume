@@ -4,6 +4,7 @@
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <title>OA's Resume.</title>
     
+    <link href="./system/css/icomoon/style.css" rel="stylesheet" type="text/css" />
     <link href="./system/css/public.css" rel="stylesheet" type="text/css" />
     <link href="./system/css/content.css" rel="stylesheet" type="text/css" />
 
@@ -13,10 +14,14 @@
     <script src="./system/js/jquery-timeago_v1.3.1/jquery.timeago.js" language="javascript" type="text/javascript" /></script>
     <script src="./system/js/jquery-timeago_v1.3.1/locales/jquery.timeago.zh-TW.js" language="javascript" type="text/javascript" /></script>
     <script src="./system/js/imagesloaded_v3.1.8/imagesloaded.pkgd.min.js" language="javascript" type="text/javascript" /></script>
+    <script src="./system/js/slider_preview.js" language="javascript" type="text/javascript" /></script>
     <script src="./system/js/public.js" language="javascript" type="text/javascript" /></script>
     <script src="./system/js/content.js" language="javascript" type="text/javascript" /></script>
   </head>
   <body lang="zh-tw">
+
+    <div id='load'><div class='loading'></div></div>
+
     <div id='container'>
       <div id='panels'>
 
@@ -27,8 +32,9 @@
 
         <div class='panel user'>
           <div class='unit avatar imgLiquid'>
-            <img src='https://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak-frc3/v/t1.0-9/180652_206152589398091_1979321_n.jpg?oh=5ebf1053aaa81995503e6c75bfce856a&oe=54ED9A15&__gda__=1424418218_c2c60dfbff841231d27fab1e0aca99ef' />
+            <img src='./system/img/avatar.jpg' />
           </div>
+          
           <div class='unit infos'>
             <div class='info clearfix'><div class='title'>中文名字</div><div class='content'>吳政賢</div></div>
             <div class='info clearfix'><div class='title'>英文名字</div><div class='content'>OA Wu</div></div>
@@ -36,6 +42,7 @@
             <div class='info clearfix'><div class='title'>出生生日</div><div class='content'>1989/07/21</div></div>
             <div class='info clearfix'><div class='title'>電子信箱</div><div class='content'>comdan66@gmail.com</div></div>
           </div>
+          
           <div class='unit bg'>
             <div class='paper'>
               Hi，您好！
@@ -46,6 +53,7 @@
             </div>
           </div>
         </div>
+
         <div class='panel java'>
           <div class='unit main_pic_area'>
             <div class='paper'>
@@ -103,41 +111,15 @@
 
         </div>
 
-<!-- 2014/7 fg 2013/7            2013/7 pt 2012/7               2012/7 1bwpn 2011/7            2011/7 4 2010/7            2010/7 3 2009/7         2009/7 2 2008/7       2008/7 1 2007/7 -->
         <div class='panel arduino'>
-          <div class='unit pic_area_1'>
-            <div class='paper'>
-              <div class='pic imgLiquid'>
-                <img src='./system/img/arduino/01.jpg' />
-              </div>
-            </div>
-          </div>
-          <div class='unit pic_area_3'>
-            <div class='paper'>
-              <div class='pic imgLiquid'>
-                <img src='./system/img/arduino/02.jpg' />
-              </div>
-            </div>
-          </div>
-          <div class='unit pic_area_4'>
-            <div class='paper'>
-              <div class='pic imgLiquid'>
-                <img src='./system/img/arduino/04.jpg' />
-              </div>
-            </div>
-          </div>
-          <div class='unit pic_area_2'>
-            <div class='paper'>
-              <div class='pic imgLiquid'>
-                <img src='./system/img/arduino/03.jpg' />
-              </div>
-            </div>
-          </div>
+          <div class='unit pic_area_1'><div class='paper'><div class='pic imgLiquid'><img src='./system/img/arduino/01.jpg' /></div></div></div>
+          <div class='unit pic_area_3'><div class='paper'><div class='pic imgLiquid'><img src='./system/img/arduino/02.jpg' /></div></div></div>
+          <div class='unit pic_area_4'><div class='paper'><div class='pic imgLiquid'><img src='./system/img/arduino/04.jpg' /></div></div></div>
+          <div class='unit pic_area_2'><div class='paper'><div class='pic imgLiquid'><img src='./system/img/arduino/03.jpg' /></div></div></div>
 
           <div class='unit title'>Arduino 新銳機器人大賽<div class='time'>2010/04</div></div>
           <div class='unit desc_1'>這是大三下關於 Arduino 的專題，專題中使用了 Arduino 以及多項 <k>Sensor</k> 組合出多功能作品，其中 Arduino 間互相溝通的方式則是使用了 <k>xbee 無線套件</k>。</div>
           <div class='unit desc_2'>作品功能大致上是借由不同 Arduino 所收集到的資訊彙集並且提供給駕駛者車況等安全資訊，所以算是基本版的 <k>智慧型腳踏車</k> 實作。</div>
-
         </div>
 
         <div class='panel album'>
@@ -182,12 +164,117 @@
           <div class='unit desc_4'>左方的 <k>Demo影片</k> 則演釋了整個遊戲的流程，歡迎有興趣者點閱。</div>
 
         </div>
-        <div class='panel'></div>
-        
+        <div class='panel comic'>
+          <div class='unit pic_area_1'><div class='paper'><div class='pic imgLiquid'><img src='./system/img/comic/05.png' /></div></div></div>
+          <div class='unit pic_area_3'><div class='paper'><div class='pic imgLiquid'><img src='./system/img/comic/04.png' /></div></div></div>
+          <div class='unit pic_area_5'><div class='paper'><div class='pic imgLiquid'><img src='./system/img/comic/03.png' /></div></div></div>
+          <div class='unit pic_area_4'><div class='paper'><div class='pic imgLiquid'><img src='./system/img/comic/02.png' /></div></div></div>
+          <div class='unit pic_area_2'><div class='paper'><div class='pic imgLiquid'><img src='./system/img/comic/01.png' /></div></div></div>
 
-        <div class='panel'></div>
-        <div class='panel'></div>
+          <div class='unit title'>C語言 漫畫下載器<div class='time'>2012/11</div></div>
+          <div class='unit desc_1'>個人這是個蠻酷的作品，用<k>C語言console界面</k>繪出模擬了BBS的版型，並且利用<k>wget</k>將知名網站-<a href='http://www.8comic.com/' target='_blank'>8comic</a>上的漫畫選擇性的下載。</div>
+          <div class='unit desc_2'>作品靈感來源只是想<k>方便看漫畫</k>，所以動手寫了程式將網站上的圖檔可以選擇性的下載，程式中利用了 SQLite、C語言多重指標、web語言工具.. 等，結合出此作品。</div>
+          <div class='unit desc_3'>下載後的漫畫皆會在client端資料夾內，並且搭配.js的瀏覽效果借由<k>index.html</k>開啓讓使用者更加方便看漫畫，有興趣也歡迎<a href='./system/file/ComicBook_5.1.zip'>下載執行黨、原始碼</a>，但此作品已沒在維護，若<a href='http://www.8comic.com/' target='_blank'>8comic</a>網站有更新的話，不保證仍可以正常下載漫畫書。</div>
+        </div>
+        <div class='panel stylewall'>
+          <div class='unit silder_panel'>
+            <div class='arrow-left  icon-chevron-left'>
+            </div>
+            <div class='arrow-right icon-chevron-right'>
+            </div>
+            <div class='silders_container'>
+              <div class='silders clearfix'>
+                <div class='silder paper'><div class='imgLiquid'><img src='./system/img/stylewall/01.png' /><div class='title'>STYLEWALL 首頁</div></div></div>
+                <div class='silder paper'><div class='imgLiquid'><img src='./system/img/stylewall/02.png' /><div class='title'>日本版 STYLEWALL</div></div></div>
+                <div class='silder paper'><div class='imgLiquid'><img src='./system/img/stylewall/03.png' /><div class='title'>韓國版 STYLEWALL</div></div></div>
+                <div class='silder paper'><div class='imgLiquid'><img src='./system/img/stylewall/04.png' /><div class='title'>國際版 STYLEWALL</div></div></div>
+                <div class='silder paper'><div class='imgLiquid'><img src='./system/img/stylewall/05.png' /><div class='title'>內地版 STYLEWALL</div></div></div>
+                <div class='silder paper'><div class='imgLiquid'><img src='./system/img/stylewall/06.png' /><div class='title'>分享美圖</div></div></div>
+                <div class='silder paper'><div class='imgLiquid'><img src='./system/img/stylewall/07.png' /><div class='title'>時尚名人</div></div></div>
+                <div class='silder paper'><div class='imgLiquid'><img src='./system/img/stylewall/08.png' /><div class='title'>收藏雜誌</div></div></div>
+              </div>
+            </div>
+          </div>
+          <div class='unit title'>STYLEWALL<div class='time'>2014/07</div></div>
+          <div class='unit desc_1'><a href='http://style.fashionguide.com.tw' target='_blank'>STYLEWALL</a>主要是一個分享時尚照片的社群網站，其Framework使用<k>CodeIgniter</k>實作，後期網站的維護主要由我個人獨立完成，當時包含了設計<k>多國結構</k>、<k>Database規劃</k>、<k>server機器的處理機制</k>..等，所以算是一個特別的經驗。</div>
+          <div class='unit desc_2'>為了負荷<k>資料變動性極大的社群網站</k>，於是利用這次經驗實作了多項CodeIgniter的library、core、controller、cell cache..等<k>規則調整</k>，並且加入了<k>phpActiveRecord</k>來加強CodeIgniter model讓<k>開發速度加快</k>以及<k>增強維護的效率</k>，因為這些練習讓我將CodeIgniter改造成屬於<k>我個人的Framework</k>。</div>
+          <div class='unit desc_3'>實作<k>跨國際性</k>的網站，對於技術而言是項<k>挑戰</k>更是個寶貴<k>經驗</k>，舉凡 AWS的雲端服務、S3空間、內地阿里雲、OSS 都是讓我在這<k>多國語系網站</k>獲得不少經驗值。</div>
+        </div>
+
+        <div class='panel github'>
+          <div class='unit main_pic '>
+            <img src='./system/img/github-octocat.png' />
+          </div>
+
+          <div class='unit title'>GitHub<div class='time'>2014/7</div></div>
+          <div class='unit desc_1'>身為<k>web工程師</k>，樂於<k>分享作品</k>這點應該是大家都有的相同特性吧，所以想必都至少會一個有屬於自己的GitHub頁面吧!</div>
+          <div class='unit desc_2'>當然，我也分享一下個人的<a href='https://github.com/comdan66' target='_blank'>GitHub頁面</a>吧，這邊主要包含了我web的<k>前後端作品</k>，以及一些心得筆記居多，如果有興趣的也歡迎<a href='https://github.com/comdan66' target='_blank'>點閱</a>。</div>
+          <div class='unit desc_3'>目前包含了一項 <a href='https://github.com/comdan66/mywall' target='_blank'>MyWall</a>、<a href='https://github.com/comdan66/oaci' target='_blank'>OA's CodeIgniter</a>、以及這份<a href='https://github.com/comdan66/resume' target='_blank'>簡歷原始碼</a>，這些都可以給大家參考，雖然不多但是未來一定會慢慢補充上去！如果有任何問題也歡迎大家來信。之後作品如果有可看性的，也會在GitHub與大家分享。</div>
+        </div>
+
+        <div class='panel end'>
+          <div class='unit hi'>The End！</div>
+          <div class='unit hi_desc'>謝謝您耐心地將它看完！</div>
+        </div>
       </div>
+
+      <div id='footer'>
+
+      <div class='description'>
+        <div class='divider'></div>
+        <div class='content bottom'>OA's Resume © 2014</div>
+      </div>
+
+        <div class='link_groups'>
+
+            <div class='link_group'>
+              <div class='group_title'>
+                特別感謝
+              </div>
+              <div class='link_list'>
+                <a href='http://style.fashionguide.com.tw' target='_blank'>STYLEWALL</a>
+              </div>
+              <div class='link_list'>
+                <a href='http://www.8comic.com/' target='_blank'>8Comic</a>
+              </div>
+            </div>
+            <div class='link_group'>
+              <div class='group_title'>
+                資源分享
+              </div>
+              <div class='link_list'>
+                <a href='https://github.com/comdan66' target='_blank'>OA's GitHub</a>
+                <a href='http://www.youtube.com/playlist?list=PLhuggjEcFzlHc3WIrFRXyOpzSgzuqHF0J' target='_blank'>OA's Youtube</a>
+              </div>
+            </div>
+            <div class='link_group'>
+              <div class='group_title'>
+                老東家
+              </div>
+              <div class='link_list'>
+                <a href='http://cht.pegatroncorp.com/' target='_blank'>和碩科技</a>
+                <a href='http://www.fashionguide.com.tw/' target='_blank'>風尚數位</a>
+              </div>
+            </div>
+            <div class='link_group'>
+              <div class='group_title'>
+                個人頁面
+              </div>
+              <div class='link_list'>
+                <a href='https://www.facebook.com/comdan66' target='_blank'>Facebook</a>
+                <a href='https://www.flickr.com/photos/comdan66' target='_blank'>Flickr</a>
+                <a href='https://www.youtube.com/user/comdan66' target='_blank'>TouTube</a>
+              </div>
+            </div>
+
+        </div>
+
+      <div class='description'>
+        <div class='divider'></div>
+        <div class='content bottom'>如有 <u>相關問題</u> 歡迎來信 <key>comdan66@gmail.com</key> 或至 <a href='https://www.facebook.com/comdan66' target='_blank'>作者臉書</a> 留言。</div>
+      </div>
+    </div>
+
     </div>
   </body>
 </html>
