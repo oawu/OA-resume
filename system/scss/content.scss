@@ -15,6 +15,9 @@ $footerLinkGroupMarginTop: 10px;
 $footerLinkGroupMarginRight: 5px;
 $footerLinkGroupMarginBottom: 5px;
 $footerLinkGroupMarginLeft: 5px;
+$headerHeight: 40px;
+$headerTransparency: 0.9;
+$headerBaseColor: 170;
 
 @mixin action-top ($px) {
   top: $px + $topActionRange;
@@ -41,6 +44,70 @@ html {
           left: $loadingWeight;
 
           background: $mainBackground;
+        }
+      }
+    }
+    #header {
+      width: 100%;
+      margin: 0;
+      display: inline-block;
+      width: 100%;
+      left: 0px;
+      top: 0;
+      height: $headerHeight;
+      border-top: 1px solid rgba($headerBaseColor - 20, $headerBaseColor - 20, $headerBaseColor - 20, .5);
+      border-bottom: 1px solid rgba(0, 0, 0, .3);
+      background-color: rgba($headerBaseColor, $headerBaseColor, $headerBaseColor, 1);
+      
+      @include background-image(linear-gradient(
+        top, rgba($headerBaseColor + 30, $headerBaseColor + 30, $headerBaseColor + 30, $headerTransparency) 0%, 
+        rgba($headerBaseColor + 20, $headerBaseColor + 20, $headerBaseColor + 20, $headerTransparency) 20%, 
+        rgba($headerBaseColor, $headerBaseColor, $headerBaseColor, $headerTransparency) 90%, 
+        rgba($headerBaseColor - 10, $headerBaseColor - 10, $headerBaseColor - 10, $headerTransparency) 100%));
+
+      @include box-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+
+      .header_padding {
+        height: 100%;
+        text-align: left;
+        position: relative;
+
+        .title, .facebook, .flickr, .youtube, .github {
+          float: left;
+          border-right: 1px solid rgba(45, 45, 45, 0.2);
+          display: inline-block;
+          height: 100%;
+          color: rgba(45, 45, 45, 0.8);
+          line-height: $headerHeight - 2px;
+          color: rgba(45, 45, 45, 0.8);
+          text-decoration: none;
+          font-weight: bold;
+          margin-right: 5px;
+          padding: 0 5px;
+
+          &:hover {
+            color: rgba(20, 20, 20, 1);
+          }
+        }
+        .title {
+          font-size: 25px;
+          font-weight: bolder;
+          margin-right: 10px;
+        }
+        .like {
+          float: left;
+          display: inline-block;
+          height: 100%;
+          line-height: 28.33333px;
+          width: 384px;
+          overflow: hidden;
+          color: #fff;
+          .hidden_elem {
+            span {
+          color: #fff;
+
+            }
+          }
         }
       }
     }
@@ -222,7 +289,6 @@ html {
             }
           }
 
-//----------------------------------------------------------------
           &.java {
             .unit {
               &.main_pic_area {
@@ -1287,85 +1353,108 @@ html {
               }
             }
           }
-
         }
       }
+    }
+    #footer {
+      margin: 50px auto;
 
+      .description {
+        position: relative;
+        text-align: center;
 
-      #footer {
-        margin: 50px auto;
+        .divider {
+          position: absolute;
+          top: 50%;
+          z-index: -1;
+        }
+        .content {
+          background-color: rgba(233, 234, 237, 1);
+          display: inline-block;
+          margin: 0 auto;
+          z-index: 0;
+          padding: 5px 10px;
+          background: $mainBackground;
 
-        .description {
-          position: relative;
-          text-align: center;
-
-          .divider {
-            position: absolute;
-            top: 50%;
-            z-index: -1;
+          &.top {
+            color: rgba(120, 130, 150, 1.0000);
           }
-          .content {
-            background-color: rgba(233, 234, 237, 1);
-            display: inline-block;
-            margin: 0 auto;
-            z-index: 0;
-            padding: 5px 10px;
-            background: $mainBackground;
-
-            &.top {
-              color: rgba(120, 130, 150, 1.0000);
+          &.bottom {
+            color: rgba(90, 100, 120, 1.0000);
+            // color: rgba(120, 130, 150, 1.0000);
+            
+            key {
+              color: #555;
             }
-            &.bottom {
-              color: rgba(90, 100, 120, 1.0000);
-              // color: rgba(120, 130, 150, 1.0000);
-              
-              key {
-                color: #555;
-              }
-              a {
-                font-weight: bold;
-              }
+            a {
+              font-weight: bold;
             }
           }
         }
-        .link_groups {
+      }
+      .link_groups {
+        position: relative;
+        text-align: center;
+        display: inline-block;
+        margin: 0 auto;
+
+        .link_group {
           position: relative;
           text-align: center;
           display: inline-block;
-          margin: 0 auto;
+          width: $footerLinkGroupWidth;
+          vertical-align: top;
+          text-align: left;
+          margin: $footerLinkGroupMarginTop $footerLinkGroupMarginRight $footerLinkGroupMarginBottom $footerLinkGroupMarginLeft;
 
-          .link_group {
-            position: relative;
-            text-align: center;
-            display: inline-block;
-            width: $footerLinkGroupWidth;
-            vertical-align: top;
-            text-align: left;
-            margin: $footerLinkGroupMarginTop $footerLinkGroupMarginRight $footerLinkGroupMarginBottom $footerLinkGroupMarginLeft;
+          .group_title {
+            padding: 3px 10px;
+            font-size: 15px;
+            color: #555;
+            font-weight: bold;
+            
+            @include overflow-docx3();
+          }
+          .link_list {
+            padding-left: 20px;
 
-            .group_title {
-              padding: 3px 10px;
-              font-size: 15px;
-              color: #555;
-              font-weight: bold;
-              
+            a {
+              display: inline-block;
+              color: rgba(138, 167, 194, 1);
+              width: 100%;
+              margin: 1px auto;
+              font-size: 13px;
+
               @include overflow-docx3();
-            }
-            .link_list {
-              padding-left: 20px;
-
-              a {
-                display: inline-block;
-                color: rgba(138, 167, 194, 1);
-                width: 100%;
-                margin: 1px auto;
-                font-size: 13px;
-
-                @include overflow-docx3();
-              }
             }
           }
         }
+      }
+    }
+    @media screen and (min-width: 0px) and (max-width: $mainWidth + 1) {
+      #header {
+        position: relative;
+
+        .header_padding {
+          z-index: 1;
+        }
+      }
+      #container {
+        margin-top: $containerTop;
+      }
+    }
+    @media screen and (min-width: $mainWidth + 2) {
+      #header {
+        position: fixed;
+        z-index: 9999;
+
+        .header_padding {
+          width: $mainWidth;
+          margin: 0 auto;
+        }
+      }
+      #container {
+        margin-top: $headerHeight + $containerTop;
       }
     }
   }
