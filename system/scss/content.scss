@@ -16,8 +16,8 @@ $footerLinkGroupMarginRight: 5px;
 $footerLinkGroupMarginBottom: 5px;
 $footerLinkGroupMarginLeft: 5px;
 $headerHeight: 40px;
-$headerTransparency: 0.9;
-$headerBaseColor: 170;
+$headerTransparency: 0.05;
+$headerBaseColor: 250;
 
 @mixin action-top ($px) {
   top: $px + $topActionRange;
@@ -57,14 +57,8 @@ html {
       height: $headerHeight;
       border-top: 1px solid rgba($headerBaseColor - 20, $headerBaseColor - 20, $headerBaseColor - 20, .5);
       border-bottom: 1px solid rgba(0, 0, 0, .3);
-      background-color: rgba($headerBaseColor, $headerBaseColor, $headerBaseColor, 1);
+      background-color: rgba($headerBaseColor, $headerBaseColor, $headerBaseColor, $headerTransparency);
       
-      @include background-image(linear-gradient(
-        top, rgba($headerBaseColor + 30, $headerBaseColor + 30, $headerBaseColor + 30, $headerTransparency) 0%, 
-        rgba($headerBaseColor + 20, $headerBaseColor + 20, $headerBaseColor + 20, $headerTransparency) 20%, 
-        rgba($headerBaseColor, $headerBaseColor, $headerBaseColor, $headerTransparency) 90%, 
-        rgba($headerBaseColor - 10, $headerBaseColor - 10, $headerBaseColor - 10, $headerTransparency) 100%));
-
       @include box-shadow(0 0 5px rgba(0, 0, 0, 0.5));
 
       .header_padding {
