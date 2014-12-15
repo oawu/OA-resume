@@ -41,10 +41,10 @@ html body #container .r .page {
   height: 600px;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
-  -moz-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.6s ease-in-out;
+  -o-transition: all 0.6s ease-in-out;
+  -webkit-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
 }
 html body #container .r .page.now {
   border: 1px solid blue;

@@ -33,7 +33,7 @@ html {
 
           // @include scale(0);
           @include opacity(0);
-          @include transition(all .3s ease-in-out);
+          @include transition(all .6s ease-in-out);
 
           &.now {
             border: 1px solid blue;

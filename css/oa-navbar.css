@@ -38,7 +38,7 @@
 @media screen and (min-width: 0px) and (max-width: 961px) {
   .oa-navbar {
     position: relative;
-    margin: 0 auto 10px auto;
+    margin: 0 auto 50px auto;
     width: 960px;
   }
 }
@@ -49,7 +49,7 @@
     top: 0;
   }
   .oa-navbar + * {
-    margin-top: 50px !important;
+    margin-top: 90px !important;
   }
 }
 .oa-navbar .oa-navbar-container {
