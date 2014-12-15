@@ -4,46 +4,51 @@
  */
 
 @import "_oa";
-
+$pageHeight: 600px;
 html {
   body {
-    #container {
+    #navbar {
+      .item {
+        font-size: 14px;
 
+      }
+    }
+    #container {
+      .r {
+        @include opacity(1);
+
+        &.r-hide {
+          position: absolute;
+          display: inline-block;
+          width: $mainWidth;
+          @include animation(r-hide .3s);
+        }
+
+        .page {
+          border: 1px solid red;
+          display: inline-block;
+          width: 100%;
+          background-color: rgba(0, 0, 255, 0.2);
+          height: $pageHeight;
+
+          // @include scale(0);
+          @include opacity(0);
+          @include transition(all .3s ease-in-out);
+
+          &.now {
+            border: 1px solid blue;
+            @include opacity(1);
+          }
+        }
+      }
     }
   }
 }
 
-// .mCS-oa {
-//   .mCSB_container {
-//     margin-right: 5px;
-//     #container {
-//     }
-//   }
-//   .mCSB_scrollTools {
-//     width: 10px;
-//     &.mCSB_scrollTools_onDrag {
-//       .mCSB_draggerContainer {
-//         .mCSB_dragger {
-//           .mCSB_dragger_bar {
-//             width: 8px;
-//             background-color: rgba(0, 0, 0, 0.4);
-//           }
-//         }
-//         .mCSB_draggerRail {
-//         }
-//       }
-//     }
-//     .mCSB_draggerContainer {
-//       .mCSB_dragger {
-//         .mCSB_dragger_bar {
-//           width: 6px;
-//           background-color: rgba(0, 0, 0, 0.2);
-//           @include opacity(1);
-//         }
-//       }
-//       .mCSB_draggerRail {
-//         @include opacity(0);
-//       }
-//     }
-//   }
-// }
+@include keyframes(r-hide) {
+  100% {
+    @include scale(1.1);
+    @include opacity(0);
+    @include filter(blur(5px));
+  }
+}

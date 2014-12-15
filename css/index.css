@@ -18,3 +18,65 @@
  * @author      OA Wu <comdan66@gmail.com>
  * @copyright   Copyright (c) 2014 OA Wu Design
  */
+html body #navbar .item {
+  font-size: 14px;
+}
+html body #container .r {
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+}
+html body #container .r.r-hide {
+  position: absolute;
+  display: inline-block;
+  width: 960px;
+  -moz-animation: r-hide 0.3s;
+  -webkit-animation: r-hide 0.3s;
+  animation: r-hide 0.3s;
+}
+html body #container .r .page {
+  border: 1px solid red;
+  display: inline-block;
+  width: 100%;
+  background-color: rgba(0, 0, 255, 0.2);
+  height: 600px;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+html body #container .r .page.now {
+  border: 1px solid blue;
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+}
+
+@-moz-keyframes r-hide {
+  100% {
+    -moz-transform: scale(1.1, 1.1);
+    transform: scale(1.1, 1.1);
+    opacity: 0;
+    filter: blur(5px);
+  }
+}
+@-webkit-keyframes r-hide {
+  100% {
+    -webkit-transform: scale(1.1, 1.1);
+    transform: scale(1.1, 1.1);
+    opacity: 0;
+    -webkit-filter: blur(5px);
+    filter: blur(5px);
+  }
+}
+@keyframes r-hide {
+  100% {
+    -moz-transform: scale(1.1, 1.1);
+    -ms-transform: scale(1.1, 1.1);
+    -webkit-transform: scale(1.1, 1.1);
+    transform: scale(1.1, 1.1);
+    opacity: 0;
+    -webkit-filter: blur(5px);
+    filter: blur(5px);
+  }
+}
