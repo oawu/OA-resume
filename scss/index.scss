@@ -1,0 +1,49 @@
+/**
+ * @author      OA Wu <comdan66@gmail.com>
+ * @copyright   Copyright (c) 2014 OA Wu Design
+ */
+
+@import "_oa";
+
+html {
+  body {
+    #container {
+
+    }
+  }
+}
+
+// .mCS-oa {
+//   .mCSB_container {
+//     margin-right: 5px;
+//     #container {
+//     }
+//   }
+//   .mCSB_scrollTools {
+//     width: 10px;
+//     &.mCSB_scrollTools_onDrag {
+//       .mCSB_draggerContainer {
+//         .mCSB_dragger {
+//           .mCSB_dragger_bar {
+//             width: 8px;
+//             background-color: rgba(0, 0, 0, 0.4);
+//           }
+//         }
+//         .mCSB_draggerRail {
+//         }
+//       }
+//     }
+//     .mCSB_draggerContainer {
+//       .mCSB_dragger {
+//         .mCSB_dragger_bar {
+//           width: 6px;
+//           background-color: rgba(0, 0, 0, 0.2);
+//           @include opacity(1);
+//         }
+//       }
+//       .mCSB_draggerRail {
+//         @include opacity(0);
+//       }
+//     }
+//   }
+// }
