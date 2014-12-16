@@ -113,3 +113,31 @@ html {
     clear: both;
   }
 }
+.paper {
+  background-color: #fff;
+  position: relative;
+  @include box-shadow(0 1px 10px rgba(153, 153, 153, 0.6));
+
+  &:before, &:after {
+    z-index: -1;
+    position: absolute;
+    display: inline-block;
+    content: "";
+    bottom: 15px;
+    left: 10px;
+    width: 50%;
+    max-width:300px;
+    background: #777;
+    max-height: 100px;
+    min-height: 10px;
+    
+    @include transform(rotate(-3deg));
+    @include box-shadow(0 15px 10px #777);
+  }
+  &:after {
+    right: 10px;
+    left: auto;
+
+    @include transform(rotate(3deg));
+  }
+}

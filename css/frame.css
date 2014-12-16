@@ -20,7 +20,7 @@
  */
 @font-face {
   font-family: "Monaco";
-  src: url('/OA-material/font/monaco/monaco.ttf?1418608233') format('truetype'), url('/OA-material/font/monaco/monaco.otf?1418608233') format('opentype');
+  src: url('/OA-material/font/monaco/monaco.ttf?1418643575') format('truetype'), url('/OA-material/font/monaco/monaco.otf?1418643575') format('opentype');
 }
 * {
   vertical-align: top;
@@ -135,4 +135,40 @@ html body #footer .description .content.bottom a {
   content: "";
   line-height: 0;
   clear: both;
+}
+
+.paper {
+  background-color: #fff;
+  position: relative;
+  -moz-box-shadow: 0 1px 10px rgba(153, 153, 153, 0.6);
+  -webkit-box-shadow: 0 1px 10px rgba(153, 153, 153, 0.6);
+  box-shadow: 0 1px 10px rgba(153, 153, 153, 0.6);
+}
+.paper:before, .paper:after {
+  z-index: -1;
+  position: absolute;
+  display: inline-block;
+  content: "";
+  bottom: 15px;
+  left: 10px;
+  width: 50%;
+  max-width: 300px;
+  background: #777;
+  max-height: 100px;
+  min-height: 10px;
+  -moz-transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg);
+  -webkit-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+  -moz-box-shadow: 0 15px 10px #777;
+  -webkit-box-shadow: 0 15px 10px #777;
+  box-shadow: 0 15px 10px #777;
+}
+.paper:after {
+  right: 10px;
+  left: auto;
+  -moz-transform: rotate(3deg);
+  -ms-transform: rotate(3deg);
+  -webkit-transform: rotate(3deg);
+  transform: rotate(3deg);
 }

@@ -34,10 +34,9 @@ html body #container .r.r-hide {
   animation: r-hide 0.3s;
 }
 html body #container .r .page {
-  border: 1px solid red;
+  position: relative;
   display: inline-block;
   width: 100%;
-  background-color: rgba(0, 0, 255, 0.2);
   height: 600px;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
@@ -47,9 +46,32 @@ html body #container .r .page {
   transition: all 0.6s ease-in-out;
 }
 html body #container .r .page.now {
-  border: 1px solid blue;
   filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
+}
+html body #container .r .page.now .effect {
+  top: 0;
+}
+html body #container .r .page.ed .effect {
+  top: -100px;
+}
+html body #container .r .page .effect {
+  position: absolute;
+  left: 0px;
+  top: 100px;
+  background-color: rgba(0, 0, 255, 0.08);
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  -moz-transition: all 0.6s ease-in-out;
+  -o-transition: all 0.6s ease-in-out;
+  -webkit-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
+}
+html body #container .r .page .effect > div {
+  position: absolute;
+  display: inline-block;
+  border: 1px solid red;
 }
 
 @-moz-keyframes r-hide {
@@ -79,4 +101,78 @@ html body #container .r .page.now {
     -webkit-filter: blur(5px);
     filter: blur(5px);
   }
+}
+.p1-1 .title {
+  top: 150px;
+  font-size: 100px;
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+}
+.p1-1 .sub_title {
+  top: 300px;
+  width: 100%;
+  text-align: center;
+  font-size: 30px;
+  color: rgba(70, 70, 70, 0.5);
+}
+
+.p1-2 .avatar {
+  left: 90px;
+  top: 40px;
+  width: 180px;
+  height: 180px;
+}
+.p1-2 .infos {
+  top: 240px;
+  left: 20px;
+  width: 320px;
+  height: 320px;
+}
+.p1-2 .about {
+  top: 40px;
+  left: 400px;
+  width: 520px;
+  height: 500px;
+  border: 0 !important;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+.p1-2 .about .paper {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  background-color: #fff;
+  border: 1px solid rgba(173, 173, 173, 0.7);
+  padding: 30px 50px;
+  text-align: left;
+  color: rgba(70, 70, 70, 0.85);
+  letter-spacing: 1.5px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+.p1-2 .about .paper .block {
+  margin-top: 18px;
+  line-height: 24px;
+  text-indent: 24pt;
+}
+.p1-2 .about .paper .block b {
+  margin: auto 3px;
+}
+.p1-2 .about .paper .block u {
+  position: relative;
+  color: rgba(70, 70, 70, 0.95);
+  text-decoration: none;
+}
+.p1-2 .about .paper .block u:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: inline-block;
+  width: 100%;
+  height: 1px;
+  border-bottom: 1px solid rgba(70, 70, 70, 0.25);
 }
