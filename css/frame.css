@@ -137,6 +137,35 @@ html body #footer .description .content.bottom a {
   clear: both;
 }
 
+.picture {
+  border: 3px solid white;
+  cursor: pointer;
+  -moz-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  -webkit-transform: scale(1, 1);
+  transform: scale(1, 1);
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  -moz-box-shadow: 0 0 2px rgba(39, 40, 34, 0.3);
+  -webkit-box-shadow: 0 0 2px rgba(39, 40, 34, 0.3);
+  box-shadow: 0 0 2px rgba(39, 40, 34, 0.3);
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.picture:hover {
+  -moz-transform: rotate(0);
+  -ms-transform: rotate(0);
+  -webkit-transform: rotate(0);
+  transform: rotate(0);
+  -moz-transform: scale(1.2, 1.2);
+  -ms-transform: scale(1.2, 1.2);
+  -webkit-transform: scale(1.2, 1.2);
+  transform: scale(1.2, 1.2);
+}
+
 .paper {
   background-color: #fff;
   position: relative;
@@ -245,4 +274,70 @@ html body #footer .description .content.bottom a {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
   }
+}
+.page_end {
+  top: 175px;
+  left: 320px;
+  width: 350px;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  font-size: 80px;
+}
+
+.prev_page, .next_page {
+  top: 200px;
+  height: 50px;
+  line-height: 50px;
+  cursor: pointer;
+  font-size: 20px;
+}
+.prev_page a, .next_page a {
+  color: rgba(70, 70, 70, 0.8);
+  text-decoration: none;
+}
+.prev_page:hover, .next_page:hover {
+  color: #464646;
+  font-weight: bold;
+}
+.prev_page:hover svg, .next_page:hover svg {
+  -moz-transform: scale(1.1, 1.1);
+  -ms-transform: scale(1.1, 1.1);
+  -webkit-transform: scale(1.1, 1.1);
+  transform: scale(1.1, 1.1);
+}
+.prev_page:hover svg *, .next_page:hover svg * {
+  fill: rgba(39, 40, 34, 0.9);
+}
+.prev_page svg, .next_page svg {
+  vertical-align: baseline;
+  margin-top: 13px;
+  -moz-transform: scale(0.9, 0.9);
+  -ms-transform: scale(0.9, 0.9);
+  -webkit-transform: scale(0.9, 0.9);
+  transform: scale(0.9, 0.9);
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.prev_page svg *, .next_page svg * {
+  fill: rgba(39, 40, 34, 0.5);
+}
+
+.prev_page {
+  left: 10px;
+  width: 200px;
+}
+.prev_page svg {
+  margin-right: 5px;
+}
+
+.next_page {
+  right: 10px;
+  width: 200px;
+  text-align: right;
+}
+.next_page svg {
+  margin-left: 5px;
 }

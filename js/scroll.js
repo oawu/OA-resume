@@ -17,7 +17,7 @@ $(function () {
                         $(this).addClass ('active').siblings ().removeClass ('active');
                         window.location.assign ($(this).data ('r'));
                       });
-              var now_index = 0, index = -1, range = 100, timer = null,
+              var now_index = 0, index = -1, range = 80, timer = null,
                   scrollTo = function (to, duration) { var start = $(window).scrollTop (),  change = to - start, currentTime = 0, increment = 20, animateScroll = function () { currentTime += increment; $(window).scrollTop (easeInOutQuad (currentTime, start, change, duration)); if(currentTime < duration) timer = setTimeout (animateScroll, increment); }; clearTimeout (timer); animateScroll (); },
                   easeInOutQuad = function (t, b, c, d) { return (t /= d / 2) < 1 ? (c / 2 * t * t + b) : (-c / 2 * (--t * (t - 2) - 1) + b); },
                   scroll_timer = setTimeout (function () { clearTimeout (scroll_timer);
@@ -40,7 +40,7 @@ $(function () {
               $footer.removeClass ('hide');
               $loading.fadeOut (function () {
                 $(this).remove ();
-                scrollTo (1, 100);
+                scrollTo (1200, 100);
               });
             });
 });

@@ -113,6 +113,19 @@ html {
     clear: both;
   }
 }
+.picture {
+  border: 3px solid rgba(255, 255, 255, 1);
+  cursor: pointer;
+  @include scale(1);
+  @include border-radius(2px);
+  @include box-shadow(0 0 2px rgba(39, 40, 34, .3));
+  @include transition(all 0.3s ease-in-out);
+
+  &:hover {
+    @include rotate(0);
+    @include scale(1.2);
+  }
+}
 .paper {
   background-color: #fff;
   position: relative;
@@ -185,5 +198,63 @@ html {
     to {
       @include rotate(360deg);
     }
+  }
+}
+.page_end {
+  top: 175px;
+  left: 320px;
+  width: 350px;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  font-size: 80px;
+}
+.prev_page, .next_page {
+  top: 200px;
+  height: 50px;
+  line-height: 50px;
+  cursor: pointer;
+  font-size: 20px;
+
+  a {
+    color: rgba(70, 70, 70, 0.8);
+    text-decoration: none;
+  }
+
+  &:hover {
+    color: rgba(70, 70, 70, 1);
+    font-weight: bold;
+
+    svg {
+      @include scale(1.1);
+      * {
+        fill: rgba(39, 40, 34, 0.9);
+      }
+    }
+  }
+  svg {
+      vertical-align: baseline;
+      margin-top: 13px;
+
+      @include scale(0.9);
+      @include transition(all 0.3s ease-out);
+      * {
+        fill: rgba(39, 40, 34, 0.5);
+      }
+  }
+}
+.prev_page {
+  left: 10px;
+  width: 200px;
+  svg {
+    margin-right: 5px;
+  }
+}
+.next_page {
+  right: 10px;
+  width: 200px;
+  text-align: right;
+  svg {
+    margin-left: 5px;
   }
 }

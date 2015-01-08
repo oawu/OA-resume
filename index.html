@@ -7,19 +7,32 @@
 
     <meta name="robots" content="index,follow" />
 
+    <link href="./res/fancyBox_v2.1.5/jquery.fancybox.css" rel="stylesheet" type="text/css">
+    <link href="./res/fancyBox_v2.1.5/jquery.fancybox-buttons.css" rel="stylesheet" type="text/css">
+    <link href="./res/fancyBox_v2.1.5/jquery.fancybox-thumbs.css" rel="stylesheet" type="text/css">
+
+
     <link href="./css/oa-navbar.css" rel="stylesheet" type="text/css">
 
     <link href="./css/frame.css" rel="stylesheet" type="text/css">
     <link href="./css/scroll.css" rel="stylesheet" type="text/css">
+    <link href="./css/index.css" rel="stylesheet" type="text/css">
 
     <script src="./js/ga.js" language="javascript" type="text/javascript" /></script>
     <script src="./res/jquery_v1.10.2/jquery-1.10.2.min.js" language="javascript" type="text/javascript" /></script>
-    <script src="./res/pathjs_v0.8.4/path.min.js" language="javascript" type="text/javascript" /></script>
+
+    <script src="./res/fancyBox_v2.1.5/jquery.fancybox.js" language="javascript" type="text/javascript"></script>
+    <script src="./res/fancyBox_v2.1.5/jquery.fancybox-buttons.js" language="javascript" type="text/javascript"></script>
+    <script src="./res/fancyBox_v2.1.5/jquery.fancybox-thumbs.js" language="javascript" type="text/javascript"></script>
+    <script src="./res/fancyBox_v2.1.5/jquery.fancybox-media.js" language="javascript" type="text/javascript"></script>
+
     <script src="./res/imagesloaded_v3.1.8/imagesloaded.pkgd.min.js" language="javascript" type="text/javascript" /></script>
     <script src="./res/jquery.scrollTo_v1.4.14/jquery.scrollTo.min.js" language="javascript" type="text/javascript" /></script>
     <script src="./res/oa-navbar/oa-navbar.js" language="javascript" type="text/javascript" /></script>
+    <script src="./res/oa-imgLiquid/oa-imgLiquid.js" language="javascript" type="text/javascript" /></script>
 
     <script src="./js/scroll.js" language="javascript" type="text/javascript" /></script>
+    <script src="./js/index.js" language="javascript" type="text/javascript" /></script>
   </head>
   <body lang="zh-tw">
     <div id='loading'>
@@ -27,41 +40,101 @@
     </div>
 
     <div id='navbar' class='hide'>
-      <div class='item active' data-r='index.html'>1</div>
-      <div class='item' data-r='r1.html'>2</div>
-      <div class='item' data-r='r2.html'>3</div>
-      <div class='item' data-r='r3.html'>4</div>
-      <div class='item' data-r='r4.html'>5</div>
-      <div class='item' data-r='r5.html'>6</div>
-      <div class='item' data-r='r6.html'>7</div>
+      <div class='item active' data-r='index.html'>簡歷</div>
+      <div class='item' data-r='r1.html'>大學時期</div>
+      <div class='item' data-r='r2.html'>自我學習</div>
+      <div class='item' data-r='r3.html'>和碩BIOS</div>
+      <div class='item' data-r='r4.html'>風尚WEB</div>
+      <div class='item' data-r='r5.html'>雲永F2E</div>
+      <div class='item' data-r='r6.html'>Git</div>
     </div>
 
     <div id='container' class='hide'>
       <div class='page'>
-        <div class='effect'>1
-        </div>
-      </div>
-      <div class='page'>
-        <div class='effect'>2
-          <iframe src="//www.youtube.com/embed/Z8ozcKeDsbk?&showinfo=0&autohide=1" frameborder="0" allowfullscreen></iframe>
-        </div>
-      </div>
-      <div class='page'>
-        <div class='effect'>3
-          <iframe src="//www.youtube.com/embed/Z8ozcKeDsbk?&showinfo=0&autohide=1" frameborder="0" allowfullscreen></iframe>
-        </div>
-      </div>
-      <div class='page'>
-        <div class='effect'>4
-        </div>
-      </div>
-      <div class='page'>
-        <div class='effect'>5
+        <div class='effect'>
+          <h2 class='hi'>Hi</h2>
+          <h3 class='plz_down'>d</h3>
         </div>
       </div>
       <div class='page'>
         <div class='effect'>
-          <iframe src="//www.youtube.com/embed/Z8ozcKeDsbk?&showinfo=0&autohide=1" frameborder="0" allowfullscreen></iframe>
+          <div class='avatar'>
+            <img src="https://graph.facebook.com/100000100541088/picture?width=100&height=100" />
+          </div>
+          <div class='main_infos'>
+            <div class='info clearfix'><div>中文名稱</div><div>吳政賢</div></div>
+            <div class='info clearfix'><div>英文名稱</div><div>OA Wu</div></div>
+            <div class='info clearfix'><div>出生日期</div><div>1989/07/21</div></div>
+            <div class='info clearfix'><div>目前職稱</div><div>前端工程師</div></div>
+          </div>
+          <article class='main_paper paper'>
+            <div class='padding'>
+              dsa
+            </div>
+          </article>
+        </div>
+      </div>
+      <div class='page'>
+        <div class='effect'>
+          <article class='sub_paper paper'>
+            <div class='padding'>
+              s
+            </div>
+          </article>
+          <div class='pic1 picture'>
+            <img src="http://upload.wikimedia.org/wikipedia/commons/d/d3/Nelumno_nucifera_open_flower_-_botanic_garden_adelaide2.jpg" />
+          </div>
+          <div class='pic2 picture'>
+            <img src="http://upload.wikimedia.org/wikipedia/commons/d/d3/Nelumno_nucifera_open_flower_-_botanic_garden_adelaide2.jpg" />
+          </div>
+          <div class='pic3 picture'>
+            <img src="http://upload.wikimedia.org/wikipedia/commons/d/d3/Nelumno_nucifera_open_flower_-_botanic_garden_adelaide2.jpg" />
+          </div>
+        </div>
+      </div>
+      <div class='page'>
+        <div class='effect'>
+          <div class='code_title'>
+            s
+          </div>
+          <div class='code_block'>
+            s
+          </div>
+          <div class='pic4 picture'>
+            <img src="img/cpp.jpg" />
+          </div>
+          <div class='pic5 picture'>
+            <img src="img/java.png" />
+          </div>
+          <div class='pic6 picture'>
+            <img src="img/php.png" />
+          </div>
+          <div class='pic7 picture'>
+            <img src="img/mysql.jpg" />
+          </div>
+          <div class='pic8 picture'>
+            <img src="img/css3.png" />
+          </div>
+          <div class='pic9 picture'>
+            <img src="img/jquery.jpg" />
+          </div>
+        </div>
+      </div>
+      <div class='page'>
+        <div class='effect'>
+          <div class='prev_page'>
+            <a href=''>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="28" viewBox="0 0 20 28"><g id="icomoon-ignore"></g><path d="M18.297 4.703l-8.297 8.297 8.297 8.297q0.297 0.297 0.297 0.703t-0.297 0.703l-2.594 2.594q-0.297 0.297-0.703 0.297t-0.703-0.297l-11.594-11.594q-0.297-0.297-0.297-0.703t0.297-0.703l11.594-11.594q0.297-0.297 0.703-0.297t0.703 0.297l2.594 2.594q0.297 0.297 0.297 0.703t-0.297 0.703z" fill="#000000"></path></svg>
+              上一頁
+            </a>
+          </div>
+          <div class='page_end'>END!</div>
+          <div class='next_page'>
+            <a href=''>
+              下一頁
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="28" viewBox="0 0 20 28"><g id="icomoon-ignore"></g><path d="M17.297 13.703l-11.594 11.594q-0.297 0.297-0.703 0.297t-0.703-0.297l-2.594-2.594q-0.297-0.297-0.297-0.703t0.297-0.703l8.297-8.297-8.297-8.297q-0.297-0.297-0.297-0.703t0.297-0.703l2.594-2.594q0.297-0.297 0.703-0.297t0.703 0.297l11.594 11.594q0.297 0.297 0.297 0.703t-0.297 0.703z" fill="#000000"></path></svg>
+            </a>
+          </div>
         </div>
       </div>
     </div>
