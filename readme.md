@@ -1,16 +1,14 @@
-# Welcome To OA's test!
-這是一個測試用的 Repositories。 
+# Welcome To OA's F2E Framework!
+OA 個人常用的前端工具總集合！ 
 
 ---
 ## 聲明
-本作品只限分享於研究、研討性質之使用，並不提供任何有營利效益之使用。  
-如有營利用途，務必告知作者 [OA](http://www.ioa.tw/) (<comdan66@gmail.com>)，並且經由作者同意。
+本作品授權採用 姓名標示-非商業性 2.0 台灣 (CC BY-NC 2.0 TW) 授權，詳見 [http://creativecommons.org/licenses/by-nc/2.0/tw/](http://creativecommons.org/licenses/by-nc/2.0/tw/)
 
 
 <br/>
 ## 簡介
-* 這是一個測試用的 Repository。  
-
+* 個人習慣工具，有興趣的參考吧！
 
 <br/>
 ## 關於
@@ -18,10 +16,10 @@
 
 * E-mail - <comdan66@gmail.com>
 
-* 作品名稱 - OA-test
+* 作品名稱 - OA's F2E Framework
 
-* 最新版本 - 1.0.0
+* 最新版本 - 1.2
 
-* GitHub - [OA-test](https://github.com/comdan66/OA-test)
+* GitHub - [OA's F2E Framework](https://github.com/comdan66/f2e/)
 
-* 更新日期 - 2014/12/15
+* 更新日期 - 2015/05/26

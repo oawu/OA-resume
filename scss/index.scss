@@ -1,184 +1,37 @@
 /**
  * @author      OA Wu <comdan66@gmail.com>
- * @copyright   Copyright (c) 2014 OA Wu Design
+ * @copyright   Copyright (c) 2015 OA Wu Design
  */
 
 @import "_oa";
 
-.hi {
-  top: 50px;
-  left: 0;
+@include font-face("Monaco", font-files("monaco/monaco.ttf", "monaco/monaco.otf"));
 
-  width: 100%;
-
-  text-align: center;
-  font-size: 100px;
-}
-.plz_down {
-  top: 250px;
-  left: 0;
-
-  width: 100%;
-
-  text-align: center;
-  font-size: 25px;
-  color: rgba(103, 103, 104, 0.7);
-}
-.avatar {
-  top: 50px;
-  left: 100px;
-
-  width: 180px;
-  height: 180px;
-
-  border: 5px solid rgba(255, 255, 255, 1);
-  background: #fff url(data:image/gif;base64,R0lGODlhEAALAPQAAP///5qamu/v7+vr6/b29pycnJqamqysrM3Nzb+/v+Pj46enp7e3t9DQ0MHBweTk5KioqJubm7i4uPT09O/v7/r6+rCwsPDw8Pn5+eHh4djY2Onp6ff39wAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCwAAACwAAAAAEAALAAAFLSAgjmRpnqSgCuLKAq5AEIM4zDVw03ve27ifDgfkEYe04kDIDC5zrtYKRa2WQgAh+QQJCwAAACwAAAAAEAALAAAFJGBhGAVgnqhpHIeRvsDawqns0qeN5+y967tYLyicBYE7EYkYAgAh+QQJCwAAACwAAAAAEAALAAAFNiAgjothLOOIJAkiGgxjpGKiKMkbz7SN6zIawJcDwIK9W/HISxGBzdHTuBNOmcJVCyoUlk7CEAAh+QQJCwAAACwAAAAAEAALAAAFNSAgjqQIRRFUAo3jNGIkSdHqPI8Tz3V55zuaDacDyIQ+YrBH+hWPzJFzOQQaeavWi7oqnVIhACH5BAkLAAAALAAAAAAQAAsAAAUyICCOZGme1rJY5kRRk7hI0mJSVUXJtF3iOl7tltsBZsNfUegjAY3I5sgFY55KqdX1GgIAIfkECQsAAAAsAAAAABAACwAABTcgII5kaZ4kcV2EqLJipmnZhWGXaOOitm2aXQ4g7P2Ct2ER4AMul00kj5g0Al8tADY2y6C+4FIIACH5BAkLAAAALAAAAAAQAAsAAAUvICCOZGme5ERRk6iy7qpyHCVStA3gNa/7txxwlwv2isSacYUc+l4tADQGQ1mvpBAAIfkECQsAAAAsAAAAABAACwAABS8gII5kaZ7kRFGTqLLuqnIcJVK0DeA1r/u3HHCXC/aKxJpxhRz6Xi0ANAZDWa+kEAA7AAAAAAAAAAAA) no-repeat center center;
-
-  @include border-radius(50%);
-  @include box-shadow(2px 2px 2px rgba(39, 40, 34, .3), 0 0 2px rgba(39, 40, 34, .3), inset 2px 2px 2px rgba(39, 40, 34, .3));
-}
-.main_infos {
-  top: 260px;
-  left: 50px;
-
-  width: 280px;
-  height: 250px;
-
-  .info {
-    display: inline-block;
-    position: relative;
-    width: 100%;
-    margin: 5px 0;
-    padding: 4px;
-
-    & + .info {
-      padding-top: 15px;
-      border-top: 1px solid rgba(39, 40, 34, .1);
-    }
-
-    div {
-      float: left;
-      display: inline-block;
-      width: 100px;
-
-      &:nth-child(1) {
-        text-align: right;
-        &:after {
-          content: ":";
-        }
-      }
-      &:nth-child(2) {
-        text-align: left;
-        padding-left: 4px;
-        width: calc(100% - 100px);
-      }
-    }
+* {
+  &, &:after, &:before {
+    vertical-align: top;
+    font-size: medium;
+    font-family: Monaco, Gafata, '微軟正黑體';
+    @include box-sizing(border-box);
+    @include selection(rgba(150, 180, 230, 1.0000), rgba(237, 239, 244, 1.0000));
+    @include font-smoothing(antialiased);
   }
 }
-.main_paper {
-  top: 30px;
-  left: 400px;
 
-  width: 500px;
-  height: 500px;
-  padding: 15px 25px;
-  border: 1px solid rgba(143, 143, 143, .5);
-  @include border-radius(3px);
+html {
+  height: 100%;
 
-  .padding {
+  body {
     position: relative;
     display: inline-block;
+    text-align: center;
+    margin: 0;
     width: 100%;
     height: 100%;
-  }
-}
-.sub_paper {
-  top: 50px;
-  left: 50px;
-  width: 500px;
-  height: 450px;
-  padding: 15px 25px;
-  border: 1px solid rgba(143, 143, 143, .5);
-  @include border-radius(3px);
+    background: $mainBackgroundColor $mainBackgroundImage;
+    color: rgba(50, 50, 50, 0.8);
 
-  .padding {
-    position: relative;
-    display: inline-block;
-    width: 100%;
-    height: 100%;
+    @include font-smoothing(antialiased);
+    @include box-shadow(none);
   }
-}
-.pic1, .pic2, .pic3 {
-  width: 300px;
-  height: 180px;
-}
-.pic1 {
-  top: 20px;
-  left: 600px;
-  @include rotate(-5deg);
-}
-.pic2 {
-  top: 190px;
-  left: 620px;
-  @include rotate(5deg);
-}
-.pic3 {
-  top: 350px;
-  left: 630px;
-  @include rotate(-5deg);
-}
-.code_title {
-  top: 130px;
-  left: 50px;
-  width: 260px;
-  height: 50px;
-  border: 1px solid rgba(255, 0, 0, .3);
-}
-.code_block {
-  top: 200px;
-  left: 50px;
-  width: 550px;
-  height: 250px;
-  border: 1px solid rgba(255, 0, 0, .3);
-}
-.pic4 {
-  top: 15px;
-  left: 330px;
-  width: 150px;
-  height: 150px;
-}
-.pic5 {
-  top: 15px;
-  left: 500px;
-  width: 150px;
-  height: 150px;
-  background-color: rgba(255, 255, 255, 1);
-}
-.pic6 {
-  top: 15px;
-  left: 670px;
-  width: 275px;
-  height: 150px;
-  background-color: rgba(255, 255, 255, 1);
-}
-.pic7 {
-  top: 190px;
-  left: 650px;
-  width: 275px;
-  height: 150px;
-  background-color: rgba(255, 255, 255, 1);
-}
-.pic8 {
-  top: 360px;
-  left: 630px;
-  width: 150px;
-  height: 150px;
-  background-color: rgba(255, 255, 255, 1);
-}
-.pic9 {
-  top: 360px;
-  left: 800px;
-  width: 150px;
-  height: 150px;
-  background-color: rgba(255, 255, 255, 1);
 }
